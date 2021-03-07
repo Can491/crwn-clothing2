@@ -8,14 +8,12 @@ class ShopPage extends React.Component {
         this.state = {
             collections: SHOP_DATA
         }
-
     }
 
     render() {
         const {collections} = this.state;
         return(
-            <div className = "shoppage">
-                {
+            <div className = "shoppage">{
                     collections.map(({id,...otherCollectionProps}) => (
                         <CollectionReview key= {id} {...otherCollectionProps}/>)
                     )}
